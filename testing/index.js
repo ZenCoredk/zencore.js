@@ -1,9 +1,10 @@
-const Discord = require("discord.js")
-const bot = new Discord.Client({
+const { Client, Intents } = require('discord.js');
+
+const bot = new Client({
     intents: [ "GUILDS", "GUILD_MEMBERS", "DIRECT_MESSAGES" ]
 })
 
-const zencore = require("zencore")
+const zencore = require("./../package/index")
 
 bot.once("ready", async function() {
     console.log(`${bot.user.username} is now ready`)
@@ -12,4 +13,4 @@ bot.once("ready", async function() {
 
 })
 
-bot.login("NDUwMjQ0ODc1NDUxODkxNzIy.WwqJNw.I_E7UhM_wzHYbVfD6ZbYw7dsf_k")
+bot.login("NDUwMjQ0ODc1NDUxODkxNzIy.WwqJNw.yRWh5z-K_x1jgmqU5bFaTqmbfHE")

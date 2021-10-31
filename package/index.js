@@ -1,16 +1,15 @@
-const Discord = require("discord.js")
+const { Intents } = require("discord.js")
 
 module.exports = {
 
     async getStatstics(bot) {
 
-        for(let key in Discord.Intents.FLAGS) {
-            console.log(Discord.Intents.FLAGS[key])
-        } 
-
         console.log("Getting stats")
         return {
-            intents: bot.options.intents,
+            intents: {
+                code: bot.options.intents,
+                array: new Intents(bot.options.intents).toArray()
+            },
             guilds: (await bot.guilds.cache.size),
         }
     }
