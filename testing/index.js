@@ -13,4 +13,4 @@ bot.once("ready", async function() {
 
 })
 
-bot.login("NDUwMjQ0ODc1NDUxODkxNzIy.WwqJNw.yRWh5z-K_x1jgmqU5bFaTqmbfHE")
+bot.login()
